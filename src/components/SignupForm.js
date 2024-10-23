@@ -1,15 +1,32 @@
 import React, { useState } from "react";
 import "./AuthForms.css";
 import Logo from "../../src/Lanos LOGO (3).png";
+import axios from "axios"; // Import axios
 
 const SignupForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords do not match");
+      return;
+    }
+    try {
+      const response = await axios.post("http://localhost:5000/api/auth/signup", {
+        name,
+        email,
+        password,
+      });
+      console.log(response.data); // Handle success (e.g., redirect or show message)
+    } catch (error) {
+      setErrorMessage(error.response?.data?.msg || "Signup failed");
+      console.error("Signup error:", error);
+    }
   };
 
   return (
