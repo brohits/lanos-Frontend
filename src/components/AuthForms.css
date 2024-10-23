@@ -1,0 +1,107 @@
+.auth-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: stretch;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form img{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.password-input input{
+  /* display: block; */
+  width: 80S %;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #E4404F
+}
+
+input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-input i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.Captcha{
+  width: 400px;
+}
+
+.auth-button {
+  background-color: #E4404F;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.google-login-button {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.google-login-button i {
+  margin-right: 5px;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 0.9em;
+  color: gray;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.toggle-form-button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: blue;
+  cursor: pointer;
+  border: none;
+  font-size: 1em;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+}
